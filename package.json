@@ -1,5 +1,5 @@
 {
-  "name": "@Soroban-geeks/core",
+  "name": "@soroban-state-manager/core",
   "version": "0.1.0",
   "description": "Programmatic TTL management and ledger entry expiration toolkit for Soroban smart contracts",
   "main": "dist/index.js",
@@ -39,16 +39,16 @@
     "sdk",
     "typescript"
   ],
-  "author": "Soroban-geeks contributors",
+  "author": "soroban-state-manager contributors",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Soroban-geeks/Soroban-geeks.git"
+    "url": "https://github.com/Soroban-geeks/soroban-state-manager.git"
   },
   "bugs": {
-    "url": "https://github.com/Soroban-geeks/Soroban-geeks/issues"
+    "url": "https://github.com/Soroban-geeks/soroban-state-manager/issues"
   },
-  "homepage": "https://github.com/Soroban-geeks/Soroban-geeks#readme",
+  "homepage": "https://github.com/Soroban-geeks/soroban-state-manager#readme",
   "peerDependencies": {
     "react": ">=17.0.0",
     "react-dom": ">=17.0.0"

@@ -1,5 +1,5 @@
 /**
- * Soroban-geeks
+ * soroban-state-manager
  *
  * Programmatic TTL management and ledger entry expiration toolkit
  * for Soroban smart contracts on Stellar.

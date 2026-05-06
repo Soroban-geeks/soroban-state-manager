@@ -21,7 +21,7 @@ assignees: ""
 <!-- What actually happened, including any error messages or stack traces -->
 
 ## Environment
-- Soroban-geeks version:
+- soroban-state-manager version:
 - Node.js version:
 - OS:
 - Stellar network (testnet/mainnet/futurenet):

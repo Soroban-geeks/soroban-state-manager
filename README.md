@@ -1,9 +1,9 @@
-# Soroban-geeks
+# soroban-state-manager
 
 **Ledger Entry Expiration Toolkit for Soroban**
 
-[![CI](https://github.com/Soroban-geeks/Soroban-geeks/actions/workflows/ci.yml/badge.svg)](https://github.com/Soroban-geeks/Soroban-geeks/actions)
-[![npm version](https://img.shields.io/npm/v/@Soroban-geeks/core)](https://www.npmjs.com/package/@Soroban-geeks/core)
+[![CI](https://github.com/Soroban-geeks/soroban-state-manager/actions/workflows/ci.yml/badge.svg)](https://github.com/Soroban-geeks/soroban-state-manager/actions)
+[![npm version](https://img.shields.io/npm/v/@soroban-state-manager/core)](https://www.npmjs.com/package/@soroban-state-manager/core)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)](https://www.typescriptlang.org/)
 
@@ -35,13 +35,13 @@ State expiration is the most disruptive concept introduced to Soroban. Ledger en
 ## Installation
 
 ```bash
-npm install @Soroban-geeks/core @stellar/stellar-sdk
+npm install @soroban-state-manager/core @stellar/stellar-sdk
 ```
 
 For React hooks:
 
 ```bash
-npm install @Soroban-geeks/core @stellar/stellar-sdk react
+npm install @soroban-state-manager/core @stellar/stellar-sdk react
 ```
 
 ---
@@ -52,7 +52,7 @@ npm install @Soroban-geeks/core @stellar/stellar-sdk react
 
 ```typescript
 import { Networks } from "@stellar/stellar-sdk";
-import { StateManager, formatDuration } from "@Soroban-geeks/core";
+import { StateManager, formatDuration } from "@soroban-state-manager/core";
 
 const sm = new StateManager({
   rpcUrl: "https://soroban-testnet.stellar.org",
@@ -113,7 +113,7 @@ const sm = new StateManager({
 ### React Hooks
 
 ```tsx
-import { useContractExpiration } from "@Soroban-geeks/core/react";
+import { useContractExpiration } from "@soroban-state-manager/core/react";
 
 function ContractHealth({ sm, contractId }) {
   const { expirationMap, isLoading, bumpAll } = useContractExpiration(sm, contractId);
@@ -136,7 +136,7 @@ function ContractHealth({ sm, contractId }) {
 ```
 
 ```tsx
-import { useEntryExpiration } from "@Soroban-geeks/core/react";
+import { useEntryExpiration } from "@soroban-state-manager/core/react";
 
 function EntryCard({ sm, ledgerKey }) {
   const { expirationInfo, bump, restore } = useEntryExpiration(sm, ledgerKey);

@@ -1,12 +1,12 @@
 /**
- * StateManager — the primary public API of Soroban-geeks.
+ * StateManager — the primary public API of soroban-state-manager.
  *
  * Wraps Soroban RPC calls to give developers programmatic, fine-grained
  * control over ledger entry TTL management.
  *
  * @example
  * ```ts
- * import { StateManager } from "@Soroban-geeks/core";
+ * import { StateManager } from "@soroban-state-manager/core";
  *
  * const sm = new StateManager({
  *   rpcUrl: "https://soroban-testnet.stellar.org",

@@ -1,12 +1,12 @@
-# Contributing to Soroban-geeks
+# Contributing to soroban-state-manager
 
 Thank you for your interest in contributing! This document explains how to get started.
 
 ## Development Setup
 
 ```bash
-git clone https://github.com/Soroban-geeks/Soroban-geeks.git
-cd Soroban-geeks
+git clone https://github.com/Soroban-geeks/soroban-state-manager.git
+cd soroban-state-manager
 npm install
 ```
 

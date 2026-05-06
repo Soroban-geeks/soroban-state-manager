@@ -18,7 +18,7 @@ Click your profile avatar (top-right) → **Your organizations** → **New organ
 Select **Free** and click **Create a free organization**.
 
 ### Step 4 — Fill in the organisation details
-- **Organization account name:** `Soroban-geeks`
+- **Organization account name:** `soroban-state-manager`
   *(This must be unique. If taken, try `soroban-state-mgr` or `ssm-stellar`)*
 - **Contact email:** your email address
 - **This organization belongs to:** My personal account
@@ -33,10 +33,10 @@ Click **Complete setup** (you can invite contributors later).
 
 ### Step 6 — Create the repository
 From your new organisation page click **New repository** (or go to
-`https://github.com/organizations/Soroban-geeks/repositories/new`).
+`https://github.com/organizations/soroban-state-manager/repositories/new`).
 
 Fill in:
-- **Repository name:** `Soroban-geeks`
+- **Repository name:** `soroban-state-manager`
 - **Description:** `Ledger entry expiration toolkit for Soroban — TypeScript library for TTL management, auto-restore, and expiration monitoring`
 - **Visibility:** ✅ Public
 - **Initialize:** Leave ALL boxes (README, .gitignore, license) **unchecked** — the repo comes with its own.
@@ -46,7 +46,7 @@ Click **Create repository**.
 ### Step 7 — Copy the remote URL
 GitHub will show you the empty repo. Copy the HTTPS URL — it will look like:
 ```
-https://github.com/Soroban-geeks/Soroban-geeks.git
+https://github.com/Soroban-geeks/soroban-state-manager.git
 ```
 
 ---
@@ -54,7 +54,7 @@ https://github.com/Soroban-geeks/Soroban-geeks.git
 ## PART 3 — Push the Project
 
 ### Step 8 — Initialise git in the project folder
-Open a terminal inside the `Soroban-geeks/` folder (the one with `package.json`):
+Open a terminal inside the `soroban-state-manager/` folder (the one with `package.json`):
 
 ```bash
 git init
@@ -64,7 +64,7 @@ git commit -m "feat: initial release — StateManager, ExpirationWatcher, React 
 
 ### Step 9 — Add the remote and push
 ```bash
-git remote add origin https://github.com/Soroban-geeks/Soroban-geeks.git
+git remote add origin https://github.com/Soroban-geeks/soroban-state-manager.git
 git branch -M main
 git push -u origin main
 ```
@@ -113,10 +113,10 @@ Click **Create**.
 ## PART 5 — Create the GitHub Project Board (Kanban Pipeline)
 
 ### Step 15 — Create a Project
-Go to your organisation page: `https://github.com/Soroban-geeks`
+Go to your organisation page: `https://github.com/soroban-state-manager`
 Click **Projects** tab → **New project**.
 - Select **Board** template
-- Name it: `Soroban-geeks — Development Pipeline`
+- Name it: `soroban-state-manager — Development Pipeline`
 Click **Create project**.
 
 ### Step 16 — Configure columns
@@ -126,13 +126,13 @@ Add one more column: click **+ Add column** → name it `In Review`.
 Final column order: **Todo → In Progress → In Review → Done**
 
 ### Step 17 — Link the project to the repository
-In the project, click **⚙️ Settings** (top-right) → **Manage access** → under **Repository access** add `Soroban-geeks/Soroban-geeks`. Click **Save**.
+In the project, click **⚙️ Settings** (top-right) → **Manage access** → under **Repository access** add `soroban-state-manager/soroban-state-manager`. Click **Save**.
 
 ---
 
 ## PART 6 — Create the 10 Development Issues
 
-Go to your repository: `https://github.com/Soroban-geeks/Soroban-geeks`
+Go to your repository: `https://github.com/Soroban-geeks/soroban-state-manager`
 Click **Issues** → **New issue** for each one below.
 
 ---
@@ -169,7 +169,7 @@ This is the first task in the pipeline and blocks all other issues.
 ```
 
 **Assign to:** yourself
-**Project:** Soroban-geeks — Development Pipeline
+**Project:** soroban-state-manager — Development Pipeline
 **Column:** Todo
 
 ---
@@ -460,7 +460,7 @@ it immediately and developers can use it without reading the source.
 **Body:**
 ```markdown
 ## Overview
-Cut the first public release of `@Soroban-geeks/core`.
+Cut the first public release of `@soroban-state-manager/core`.
 
 ## Tasks
 - [ ] Ensure all Issues #1–#9 are closed / in Done column
@@ -485,9 +485,9 @@ Cut the first public release of `@Soroban-geeks/core`.
 - [ ] Create GitHub Release from the tag with auto-generated notes
 
 ## Acceptance Criteria
-- `npm install @Soroban-geeks/core` works from a fresh project
+- `npm install @soroban-state-manager/core` works from a fresh project
 - Both `require` (CJS) and `import` (ESM) work
-- React hooks importable via `@Soroban-geeks/core/react`
+- React hooks importable via `@soroban-state-manager/core/react`
 
 ## Depends On
 - Issues #1–#9 all closed
@@ -499,7 +499,7 @@ Cut the first public release of `@Soroban-geeks/core`.
 
 ### Step 18 — Add each issue to the Project
 After creating each issue, on the right sidebar under **Projects** click the gear icon →
-select **Soroban-geeks — Development Pipeline** → place it in the **Todo** column.
+select **soroban-state-manager — Development Pipeline** → place it in the **Todo** column.
 
 ### Step 19 — Set issue order in Todo column
 Drag issues into this order (top = highest priority):
@@ -533,8 +533,8 @@ Go to **Issues** → **Labels** → **New label** for each:
 
 ## Summary Checklist
 
-- [ ] GitHub Organisation created: `Soroban-geeks`
-- [ ] Repository created: `Soroban-geeks/Soroban-geeks` (public)
+- [ ] GitHub Organisation created: `soroban-state-manager`
+- [ ] Repository created: `soroban-state-manager/soroban-state-manager` (public)
 - [ ] Code pushed to `main`
 - [ ] `develop` branch created and pushed
 - [ ] Repository topics added (soroban, stellar, typescript, etc.)

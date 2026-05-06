@@ -1,5 +1,5 @@
 /**
- * Core types for Soroban-geeks
+ * Core types for soroban-state-manager
  * Covers Soroban ledger entry TTL management, expiration tracking, and restoration.
  */
 
