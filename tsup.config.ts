@@ -11,6 +11,11 @@ export default defineConfig([
     splitting: false,
     treeshake: true,
     minify: false,
+    outExtension({ format }) {
+      return {
+        js: format === "esm" ? ".esm.js" : ".js",
+      };
+    },
     outDir: "dist",
   },
   {
@@ -21,6 +26,11 @@ export default defineConfig([
     external: ["react", "react-dom", "@stellar/stellar-sdk"],
     splitting: false,
     treeshake: true,
+    outExtension({ format }) {
+      return {
+        js: format === "esm" ? ".esm.js" : ".js",
+      };
+    },
     outDir: "dist",
   },
 ]);
