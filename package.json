@@ -7,14 +7,14 @@
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
-      "import": "./dist/index.esm.js",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/index.esm.js"
     },
     "./react": {
+      "types": "./dist/react.d.ts",
       "require": "./dist/react.js",
-      "import": "./dist/react.esm.js",
-      "types": "./dist/react.d.ts"
+      "import": "./dist/react.esm.js"
     }
   },
   "scripts": {

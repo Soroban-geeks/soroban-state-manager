@@ -14,7 +14,6 @@ import type {
   BumpOptions,
   BumpResult,
   ContractExpirationState,
-  ExpirationMap,
 } from "../types/index.js";
 
 export function useContractExpiration(

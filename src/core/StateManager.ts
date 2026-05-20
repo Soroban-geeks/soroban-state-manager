@@ -22,7 +22,6 @@
 import {
   Account,
   Keypair,
-  Networks,
   Operation,
   SorobanRpc,
   Transaction,
@@ -195,9 +194,7 @@ export class StateManager {
       const currentLedger = await fetchCurrentLedger(this.server);
       const targetLedger = currentLedger + options.ledgerBuffer;
 
-      const xdrKey = this._ledgerKeyToXdr(ledgerKey);
-
-      const tx = new TransactionBuilder(new Account(account.id, account.sequenceNumber()), {
+      const tx = new TransactionBuilder(new Account(account.accountId(), account.sequenceNumber()), {
         fee: String(options.fee ?? BASE_FEE),
         networkPassphrase: options.networkPassphrase ?? this.config.networkPassphrase,
       })
@@ -275,11 +272,10 @@ export class StateManager {
       const keypair = Keypair.fromSecret(this.config.secretKey);
       const account = await this.server.getAccount(keypair.publicKey());
 
-      const xdrKey = this._ledgerKeyToXdr(ledgerKey);
       const networkPassphrase =
         options.networkPassphrase ?? this.config.networkPassphrase;
 
-      const tx = new TransactionBuilder(new Account(account.id, account.sequenceNumber()), {
+      const tx = new TransactionBuilder(new Account(account.accountId(), account.sequenceNumber()), {
         fee: String(options.fee ?? BASE_FEE),
         networkPassphrase,
       })
@@ -396,24 +392,6 @@ export class StateManager {
     // For persistent and temporary we'd normally enumerate via contract metadata;
     // Here we expose a sensible default that callers can extend.
     return keys;
-  }
-
-  private _ledgerKeyToXdr(ledgerKey: LedgerKey): xdr.LedgerKey {
-    // Build a contract-data ledger key for the given storageType
-    const durability =
-      ledgerKey.storageType === "temporary"
-        ? xdr.ContractDataDurability.temporary()
-        : xdr.ContractDataDurability.persistent();
-
-    return xdr.LedgerKey.contractData(
-      new xdr.LedgerKeyContractData({
-        contract: xdr.ScAddress.scAddressTypeContract(
-          xdr.Hash.fromXDR(Buffer.from(ledgerKey.contractId.slice(1), "base64"))
-        ),
-        key: xdr.ScVal.scvString(ledgerKey.key),
-        durability,
-      })
-    );
   }
 
   private async _pollTransaction(
